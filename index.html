@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Bestie! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Front Cover Page - Elegant 3D Card -->
+    <div id="cover-page" class="page active">
+        <div class="cover-background">
+            <div class="floating-elements">
+                <div class="floating-butterfly">🦋</div>
+                <div class="floating-sparkle">✨</div>
+                <div class="floating-heart">💕</div>
+                <div class="floating-star">⭐</div>
+            </div>
+            <div class="bokeh-lights"></div>
+        </div>
+        <div class="card-3d-container">
+            <div class="greeting-card-3d">
+                <div class="card-front-3d">
+                    <div class="sparkles"></div>
+                    <div class="butterflies"></div>
+                    <div class="birthday-border"></div>
+                    <center>
+                    <h1 class="cover-title">Happy Birthday Kala! 🥰</h1>
+                    <div class="tap-prompt">Tap to Open</div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Birthday Wish Page -->
+    <div id="wish-page" class="page">
+        <div class="wish-container">
+            <div class="wish-card">
+                <div class="doodles"></div>
+                <div class="wish-content">
+                    <h2 class="wish-title">To My Amazing Best Friend</h2>
+                    <div class="wish-message">
+                        <p>Oii Nayii 🐕 wishuu uhhh the best and happiely ended birthday wishes for uhhh 🥰</p>   
+                        <p>Nama Friendship from last 3 years inda channg ede, so hinge namma friendship forever agi erli♾️ eruthe</p>
+                        <p>Your friendship means the world to me, and I'm so grateful for all the amazing memories we've created together.</p>
+                        <p>May this new year bring you endless joy, laughter, and all the happiness you deserve!</p>
+                        <p>The endless happiness from my side wish uhh the best of luck for your upcoming journey 👍</p>
+                        <p>I real missing you 🥲 </p>
+                    </div>
+                </div>
+            </div>
+            <button class="next-btn" onclick="showGallery()">View Memories</button>
+        </div>
+    </div>
+
+    <!-- Photo Gallery Page -->
+    <div id="gallery-page" class="page">
+        <div class="gallery-container">
+            <h2 class="gallery-title">Our Beautiful Memories</h2>
+            <div class="photo-grid">
+                <div class="polaroid" onclick="revealMessage(this)">
+                    <div class="photo-placeholder" style="position: relative;">
+                        <img src="image.pgn/photo 1.jpeg" alt="Best friends forever" class="actual-photo">
+                        <div class="photo-frame"></div>
+                    </div>
+                    <div class="photo-caption">Best friends forever!</div>
+                    <div class="hidden-message">Remember this amazing day? You looked so beautiful! 💕</div>
+                </div>
+                <div class="polaroid" onclick="revealMessage(this)">
+                    <div class="photo-placeholder" style="position: relative;">
+                        <img src="image.pgn/photo 6.jpeg" alt="Spring adventures" class="actual-photo">
+                        <div class="photo-frame"></div>
+                    </div>
+                    <div class="photo-caption">Captured happiness in frames</div>
+                    <div class="hidden-message">There’s a kind of comfort in knowing that some people enter your life silently and suddenly become the best part of it. 🌺</div>
+                </div>
+                <div class="polaroid" onclick="revealMessage(this)">
+                    <div class="photo-placeholder" style="position: relative;">
+                        <img src="image.pgn/photo 8.jpeg" alt="Ur 1st brd " class="actual-photo">
+                        <div class="photo-frame"></div>
+                    </div>
+                    <div class="photo-caption">On ur special day</div>
+                    <div class="hidden-message">From random days to memorable stories, every time we meet life feels a little lighter. Thankful for every small moment that becomes a forever memory. </div>
+                </div>
+                <div class="polaroid" onclick="revealMessage(this)">
+                    <div class="photo-placeholder" style="position: relative;">
+                        <img src="image.pgn/photo 2.jpeg" alt="Fun times" class="actual-photo">
+                        <div class="photo-frame"></div>
+                    </div>
+                    <div class="photo-caption">Fun times</div>
+                    <div class="hidden-message">You always know how to make me laugh! 😂✨ and also know how to make me anger 😡</div>
+                </div>
+                <div class="polaroid" onclick="revealMessage(this)">
+                    <div class="photo-placeholder" style="position: relative;">
+                        <img src="image.pgn/photo 7.jpeg" alt="More memories" class="actual-photo">
+                        <div class="photo-frame"></div>
+                    </div>
+                    <div class="photo-caption">last pic of the sem end</div>
+                    <div class="hidden-message">Another beautiful moment we shared together!but there is time to spend 🥲 </div>
+                </div>
+            </div>
+            
+            <!-- Interactive Photo Upload Section -->
+            <div class="add-photo-section">
+                <h3 class="add-photo-title">Add Your Own Memory 📸</h3>
+                <div class="photo-upload-area">
+                    <input type="file" id="photo-upload" accept="image/*" style="display: none;">
+                    <div class="upload-controls">
+                        <button class="upload-btn" onclick="document.getElementById('photo-upload').click()">📷 Choose Photo</button>
+                        <input type="text" id="photo-caption-input" placeholder="Enter photo caption..." class="text-input">
+                        <input type="text" id="photo-message-input" placeholder="Enter hidden message..." class="text-input">
+                        <button class="add-photo-btn" onclick="addNewPhoto()">✨ Add Memory</button>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-controls">
+                <button class="gallery-btn" onclick="addPhotoSlot()">+ Add Memory</button>
+                <button class="next-btn" onclick="showFriendshipWall()">Friendship Wall</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Friendship Wall Page -->
+    <div id="friendship-wall-page" class="page">
+        <div class="wall-container">
+            <h2 class="wall-title">Friendship Wall</h2>
+            <div class="sticky-notes-container">
+                <div class="sticky-note pink" style="transform: rotate(-2deg);">
+                    <p>You're the best friend anyone could ask for! 💕</p>
+                </div>
+                <div class="sticky-note yellow" style="transform: rotate(3deg);">
+                    <p>Thanks for always being there for me! 🌟</p>
+                </div>
+                <div class="sticky-note blue" style="transform: rotate(-1deg);">
+                    <p>Our friendship is pure magic! ✨</p>
+                </div>
+            </div>
+            <div class="add-note-section">
+                <textarea id="custom-note" placeholder="Add your own birthday wish..."></textarea>
+                <button onclick="addCustomNote()">Add Note</button>
+            </div>
+            <button class="next-btn" onclick="showCelebration()">Let's Celebrate!</button>
+        </div>
+    </div>
+
+    <!-- Celebration Page -->
+    <div id="celebration-page" class="page">
+        <div class="celebration-container">
+            
+            <div class="balloons"></div>
+            <div class="confetti"></div>
+            <div class="sparkles-celebration"></div>
+            <div class="celebration-frame"></div>
+
+            <div class="celebration-text-group">
+            <h2 class="celebration-title">🎉 Happy Birthday! 🎉</h2>
+            <h1 class="celebration-message">Hope your special day is absolutely wonderful!</h1><br>
+            <button class="restart-btn" onclick="restartExperience()">Start Over</button>
+        </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
